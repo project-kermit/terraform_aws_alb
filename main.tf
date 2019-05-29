@@ -36,4 +36,3 @@
  *       project_path        = "your/project"
  *     }
  */
-
