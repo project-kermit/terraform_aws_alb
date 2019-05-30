@@ -8,7 +8,7 @@ data "aws_subnet" "primary_subnet" {
 
 // alb_security_group provides the security group for the ALB.
 module "alb_security_group" {
-  source       = "github.com/paybyphone/terraform_aws_security_group?ref=v0.1.0"
+  source       = "github.com/project-kermit/terraform_aws_security_group?ref=9057fa1002daf096cac49cc11c21c2d1da1fe5d4"
   project_path = var.project_path
   vpc_id       = data.aws_subnet.primary_subnet.vpc_id
 }

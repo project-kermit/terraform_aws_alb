@@ -17,7 +17,7 @@ resource "aws_alb_listener" "alb_listener" {
   load_balancer_arn = aws_alb.alb.arn
   port              = var.listener_port
   protocol          = var.listener_protocol
-  ssl_policy = lookup(
+  ssl_policy = var.listener_ssl_policy != "" ? var.listener_ssl_policy : lookup(
     {
       "HTTP" = ""
     },
